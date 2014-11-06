@@ -1,17 +1,17 @@
 
 ==================================================================================================
 
-SPARROW is a clean, modern and visually attractive template. It is designed to be a 
-multi-purpose site template. You can use it for many types of website: business, corporate, 
-portfolio, marketing, etc. It is built using html5 and CSS3, is fully responsive and looks great
-on different devices.
+ZOON is a fully responsive, simple, clean and mobile friendly coming soon 
+site template. Included in the template is a countdown timer, a google map section 
+and an about section where you can add information about your team, company, group, etc.
+Zoon is easy to customize and is compatible with most modern browser.
 
 ==================================================================================================
 
 
 LICENSE:
 
-SPARROW is released under the Creative Commons Attribution 3.0 License
+ZOON is released under the Creative Commons Attribution 3.0 License
 (http://creativecommons.org/licenses/by/3.0/). This means that you are free:
 
    to Share - to copy, distribute, display, and perform the work
@@ -56,9 +56,20 @@ Also, keep your Paypal receipt as proof of payment and your good to go.
 ------------------------------------------------------------------------------------------------------ 
 
 
+USING THE MAILCHIMP FORM:
+
+Adding your own MailChimp powered email sign-up is easy. Grab the super slim code from 
+your MailChimp account and drop the code in the HTML file. Lastly, remove the link 
+and style tags that comes with the embedded code and your good to go. 
+All styling is within our stylesheet.
+
+
+------------------------------------------------------------------------------------------------------ 
+
+
 SUPPORT:
     
-Since SPARROW is distributed for free, support is not offered. SPARROW is coded according 
+Since ZOON is distributed for free, support is not offered. ZOON is coded according 
 to current web standards and we did our best to make the template easy to use and modify.
 If you have minimum web development experience, you can easily modify the template. 
 However, If you're still new to HTML and CSS, I suggest that you visit the 
@@ -92,26 +103,25 @@ SOURCES AND CREDITS:
 I've used the following resources as listed.
 
 Fonts:
- - Raleway Font (http://www.google.com/fonts/specimen/Raleway)
- - Noto Sans Font (http://www.google.com/fonts/specimen/Noto+Sans)
- - Fira Sans Font for the Sparrow logo (http://www.fontsquirrel.com/fonts/fira-sans)
+ - Montserrat Font (http://www.google.com/fonts/specimen/Montserrat)
+ - Merriweather Font (http://www.google.com/fonts/specimen/Merriweather) 
 
 Icons:
  - Font Awesome (http://fortawesome.github.io/Font-Awesome/)
- - iconmonstr (http://iconmonstr.com/)
+ - Fontello (http://fontello.com/)
 
 Stock Photos and Graphics:
  - UnSplash.com (http://unsplash.com/)
- - Morguefile.com (http://www.morguefile.com/)
- - BestPsdFreebies.com (http://www.bestpsdfreebies.com/)
- - PremiumPixels.com (http://www.premiumpixels.com/)
-
+ 
 Javascript Files:
 
  - JQuery (http://jquery.com/)
- - FlexSlider by Woothemes (http://www.woothemes.com/flexslider/)
  - Modernizr (http://modernizr.com/)
- - DoubleTapToGo.js (http://osvaldas.info/examples/drop-down-navigation-touch-friendly-and-responsive/doubletaptogo.js)
+ - jQuery Waypoints (http://imakewebthings.com/jquery-waypoints/)
+ - jQuery Backstretch (https://github.com/srobbin/jquery-backstretch) 
+ - jQuery Final Countdown (http://hilios.github.io/jQuery.countdown/)
+ - jQuery Placeholder (https://github.com/mathiasbynens/jquery-placeholder)
+ - GMaps (http://hpneo.github.io/gmaps/)
 
 --------------------------------------------------------------------------------------------------------- 
 

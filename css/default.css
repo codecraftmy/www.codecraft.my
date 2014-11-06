@@ -1,18 +1,19 @@
 /*
 =====================================================================
-*   Sparrow v1.0 Default Stylesheet
+*   Zoon v1.0 Default Stylesheet
 *   url: styleshout.com
-*   02-07-2014
+*   06-07-2014
 =====================================================================
 
 TOC:
 a. Webfonts and Icon fonts
-b. Reset
-c. Default Styles
+b. Preloader
+c. Reset
+d. Default Styles
    1. Basic
    2. Typography
    3. Links
-   4. Images
+   4. Media
    5. Buttons
    6. Forms
 d. Grid
@@ -22,15 +23,42 @@ e. Others
 
 =====================================================================  */
 
+
 /* ------------------------------------------------------------------ */
 /* a. Webfonts and Icon fonts
  ------------------------------------------------------------------ */
 
 @import url("fonts.css");
+@import url("fontello/css/fontello.css");
 @import url("font-awesome/css/font-awesome.min.css");
 
+
+/* ------------------------------------------------------------------ */
+/* b. Preloader
+ ------------------------------------------------------------------ */
+
+#preloader  {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: #fff;
+   z-index: 99999;
+   height: 100%;
+}
+#status  {    
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 64px;
+   height: 64px;
+   margin: -32px 0 0 -32px;  
+   padding: 0;    
+}
+
 /* ------------------------------------------------------------------
-/* b. Reset
+/* c. Reset
       Adapted from:
       Normalize.css - https://github.com/necolas/normalize.css/
       HTML5 Doctor Reset - html5doctor.com/html-5-reset-stylesheet/
@@ -101,7 +129,7 @@ ins {
 }
 
 mark {
-   background-color: #A7F4F6;
+   background-color: #B5F9D0;
    color: #555;
 }
 
@@ -119,13 +147,13 @@ table {
 
 
 /* ------------------------------------------------------------------ */
-/* c. Default and Basic Styles
+/* d. Default and Basic Styles
       Adapted from:
       Skeleton CSS Framework - http://www.getskeleton.com/
       Typeplate Typographic Starter Kit - http://typeplate.com/
 /* ------------------------------------------------------------------ */
 
-/*  1. Basic  ------------------------------------------------------- */
+/* 1. Basic  ------------------------------------------------------- */
 
 *,
 *:before,
@@ -139,7 +167,8 @@ html { font-size: 62.5%; }
 
 body {
    background: #fff;
-   font-family: notosans-regular, sans-serif;
+   font-family: 'merriweather-regular', sans-serif;
+   font-weight: normal;
    font-size: 15px;
    line-height: 30px;
 	color: #838C95;
@@ -148,19 +177,20 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-/*  2. Typography
-       Vertical rhythm with leading derived from 6
+/* 2. Typography
+      Vertical rhythm with leading derived from 6
 --------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
    color: #313131;
-	font-family: raleway-bold, sans-serif;
+	font-family: 'montserrat-bold', sans-serif;
+   font-weight: normal;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: 42px; line-height: 48px; margin-bottom: 12px;}
-h2 { font-size: 30px; line-height: 42px; margin-bottom: 6px; }
-h3 { font-size: 24px; line-height: 30px; margin-bottom: 12px; }
-h4 { font-size: 21px; line-height: 30px; margin-bottom: 6px; }
+h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
+h2 { font-size: 28px; line-height: 36px; margin-bottom: 6px; }
+h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
+h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
 h5 { font-size: 18px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
 .subheader { }
@@ -168,15 +198,14 @@ h6 { font-size: 14px; line-height: 30px; }
 p { margin: 0 0 30px 0; }
 p img { margin: 0; }
 p.lead {
-   font: 20px/36px raleway-regular, sans-serif;
-   margin-bottom: 18px;
-   color: #9FA5AD;
+   font: 18px/36px 'merriweather-light', sans-serif;
+   margin-bottom: 24px;
 }
 
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems in some browsers */
-em { font: 15px/30px notosans-italic, sans-serif; }
-strong, b { font: 15px/30px notosans-bold, sans-serif; }
+em { font: 15px/30px 'merriweather-italic', sans-serif; }
+strong, b { font: 15px/30px 'merriweather-bold', sans-serif; }
 small { font-size: 11px; line-height: inherit; }
 
 /*	Blockquotes */
@@ -255,7 +284,7 @@ blockquote cite a:visited { color: #8B9798; border: none }
 
 /* Abbreviations */
 abbr {
-   font-family: notosans-bold, sans-serif;
+   font-family: 'merriweather-bold', sans-serif;
 	font-variant: small-caps;
 	text-transform: lowercase;
    letter-spacing: .5px;
@@ -269,14 +298,14 @@ abbr:hover { cursor: help; }
 	margin: 0;
 	padding: 14px 6px 0 0;
 	font-size: 84px;
-	font-family: /* Copperplate */ raleway-bold, sans-serif;
+	font-family: /* Copperplate */ 'montserrat-bold', sans-serif;
    line-height: 60px;
 	text-indent: 0;
 	background: transparent;
 	color: inherit;
 }
 
-hr { border: solid #E3E3E3; border-width: 1px 0 0; clear: both; margin: 11px 0 30px; height: 0; }
+hr { border: solid #E8E8E8; border-width: 1px 0 0; clear: both; margin: 11px 0 30px; height: 0; }
 
 
 /*  3. Links  ------------------------------------------------------- */
@@ -284,14 +313,14 @@ hr { border: solid #E3E3E3; border-width: 1px 0 0; clear: both; margin: 11px 0 3
 a, a:visited {
    text-decoration: none;
    outline: 0;
-   color: #11ABB0;
+   color: #197C28;
 
    -webkit-transition: color .3s ease-in-out;
    -moz-transition: color .3s ease-in-out;
    -o-transition: color .3s ease-in-out;
    transition: color .3s ease-in-out;
 }
-a:hover, a:focus { color: #313131; }
+a:hover, a:focus { color: #333; }
 p a, p a:visited { line-height: inherit; }
 
 
@@ -340,24 +369,24 @@ li p { }
 .stats-tabs li a {
 	display: inline-block;
 	font-size: 22px;
-	font-family: notosans-bold, sans-serif;
+	font-family: 'montserrat-bold', sans-serif;
    border: none;
    color: #313131;
 }
 .stats-tabs li a:hover {
-   color:#11ABB0;
+   color: #197C28;
 }
 .stats-tabs li a b {
 	display: block;
 	margin: 6px 0 0 0;
 	font-size: 13px;
-	font-family: notosans-regular, sans-serif;
+	font-family: 'montserrat-regular', sans-serif;
    color: #8B9798;
 }
 
 /* definition list */
 dl { margin: 12px 0; }
-dt { margin: 0; color:#11ABB0; }
+dt { margin: 0; color: #197C28; }
 dd { margin: 0 0 0 20px; }
 
 /* Lining Definition Style Markup */
@@ -407,7 +436,7 @@ dd { margin: 0 0 0 20px; }
    padding: 0;
 }
 .pagination .page-numbers {
-   font: 15px/18px notosans-bold, sans-serif;
+   font: 15px/18px 'montserrat-regular', sans-serif;
    display: inline-block;
    padding: 6px 10px;
    margin-right: 3px;
@@ -421,10 +450,7 @@ dd { margin: 0 0 0 20px; }
 	-ms-transition: all 200ms ease-in-out;
 	transition: all 200ms ease-in-out;
 
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -khtml-border-radius: 3px;
-	border-radius: 3px;
+   border-radius: 3px;
 }
 .pagination .page-numbers:hover {
    background: #838A91;
@@ -432,7 +458,7 @@ dd { margin: 0 0 0 20px; }
 }
 .pagination .current,
 .pagination .current:hover {
-   background-color: #11ABB0;
+   background-color: #197C28;
    color: #fff;
 }
 .pagination .inactive,
@@ -442,16 +468,20 @@ dd { margin: 0 0 0 20px; }
 }
 .pagination .prev, .pagination .next {}
 
-/*  5. Images  --------------------------------------------------------- */
+/* 5. Media   --------------------------------------------------------- */
 
-img {
+img,
+video,
+iframe,
+embed,
+object {
    max-width: 100%;
    height: auto;
 }
 img.pull-right { margin: 12px 0px 0px 18px; }
 img.pull-left { margin: 12px 18px 0px 0px; }
 
-/*  6. Buttons  --------------------------------------------------------- */
+/* 6. Buttons  --------------------------------------------------------- */
 
 .button,
 .button:visited,
@@ -459,17 +489,17 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-   font: 16px/30px notosans-bold, sans-serif;
-   background: #11ABB0;
-   display: inline-block;
-	text-decoration: none;
-   letter-spacing: 0;
+   font: 14px/24px 'montserrat-bold', sans-serif;
+   background: #197C28;
    color: #fff;
-	padding: 12px 24px;
+   display: inline-block;   
+	text-decoration: none;
+   letter-spacing: 0;   
+	padding: 12px 20px;
 	margin-bottom: 18px;
    border: none;
    cursor: pointer;
-   height: auto;
+   height: auto;  
 
    -webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
@@ -477,9 +507,6 @@ input[type="button"] {
 	-ms-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -khtml-border-radius: 3px;
    border-radius: 3px;
 }
 
@@ -488,7 +515,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-   background: #3d4145;
+   background: #146320;
    color: #fff;
 }
 
@@ -497,7 +524,7 @@ button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
-   background: #3d4145;
+   background: #197C28;
    color: #fff;
 }
 
@@ -520,7 +547,7 @@ input::-moz-focus-inner {
 }
 
 
-/*  7. Forms  --------------------------------------------------------- */
+/* 7. Forms  --------------------------------------------------------- */
 
 form { margin-bottom: 24px; }
 fieldset { margin-bottom: 24px; }
@@ -536,17 +563,14 @@ select {
    border: 0;
    outline: none;
    vertical-align: middle;
-   min-width: 260px;
+   min-width: 225px;
 	max-width: 100%;
    font-size: 15px;
    line-height: 24px;
 	color: #647373;
 	background: #D3D9D9;
+   border-radius: 3px;
 
-   -moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
 }
 
 /* select { padding: 0;
@@ -558,14 +582,14 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
    color: #B3B7BC;
-	background-color: #3d4145;
+	background-color: #383D41;
 }
 
-textarea { min-height: 200px; }
+textarea { min-height: 220px; }
 
 label,
 legend {
-   font: 16px/24px notosans-bold, sans-serif;
+   font: 16px/24px 'montserrat-bold', sans-serif;
 	margin: 12px 0;
    color: #3d4145;
    display: block;
@@ -573,28 +597,44 @@ legend {
 label span,
 legend span {
 	color: #8B9798;
-   font: 14px/24px notosans-regular, sans-serif;
+   font: 14px/24px 'merriweather-regular', sans-serif;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    font-size: 15px;
-    color: #737373;
+   font-size: 15px;
+   color: #3d4145;
 }
 
 input[type="checkbox"] { display: inline; }
 
+/* Style Placeholder Text */
+
+::-webkit-input-placeholder {
+   color: #B3B7BC;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #B3B7BC;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #B3B7BC;  
+}
+:-ms-input-placeholder { 
+   color: #B3B7BC;  
+}
+.placeholder {
+	color: #B3B7BC !important;
+}
+
 /* ------------------------------------------------------------------ */
-/* d. Grid
----------------------------------------------------------------------
-   gutter = 40px.
-/* ------------------------------------------------------------------ */
+/* e. Grid
+--------------------------------------------------------------------- */
 
 /* default
 --------------------------------------------------------------- */
 .row {
    width: 96%;
-   max-width: 1020px;
+   max-width: 1008px;
    margin: 0 auto;
 }
 /* fixed width for IE8 */
@@ -716,7 +756,7 @@ properly.
 
 }
 
-/* mobile wide/smaller tablets
+/* screenwidth less than 768px - mobile/smaller tablets
 --------------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
 
@@ -726,7 +766,7 @@ properly.
       padding: 0;
 	}
    .column, .columns {
-	   width: auto !important;
+	   width: auto !important;      
 	   float: none;
 	   margin-left: 0;
 	   margin-right: 0;
@@ -751,7 +791,7 @@ properly.
    .row .offset-11   { margin-left: 0%; }
 }
 
-/* mobile narrow
+/* screenwidth less than or equal 480px - mobile wide
 --------------------------------------------------------------- */
 @media only screen and (max-width: 480px) {
 
@@ -768,7 +808,7 @@ properly.
 }
 
 /* ------------------------------------------------------------------ */
-/* e. Others
+/* f. Others
 /* ------------------------------------------------------------------ */
 
 /*  1. Clearing
